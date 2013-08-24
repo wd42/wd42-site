@@ -1,9 +1,5 @@
 
-@media all and (min-width: $break-min) {
-
-}
-
-@media all and (min-width: $break-min) and (orientation:landscape) {
+@media #{$desktop} {
   section {
     display: none;
     &:target {
