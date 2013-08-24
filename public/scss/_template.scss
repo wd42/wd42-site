@@ -1,0 +1,6 @@
+section {
+  padding: $base-padding;
+  &:nth-child(odd){
+    background: darken($accent-color, 25%);
+  }
+}

@@ -1,10 +1,15 @@
 $globalFontSize: 1;
 
-$body-font-stack:  'Arial', sans-serif;
+$body-font-stack:  'Exo', sans-serif;
 
 $body-color: #8a8c99;
 $heading-color: #8a8c99;
+
 $accent-color: #4fb76c;
+
+$break-min: 769px;
+
+$base-padding: 10px;
 
 @import "bourbon/bourbon";
 @import "neat/neat";

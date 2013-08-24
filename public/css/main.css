@@ -259,17 +259,22 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-#content #members-dir {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  #content #members-dir:last-child {
-    margin-right: 0; }
-#content #activity-dir {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  #content #activity-dir:last-child {
-    margin-right: 0; }
+body {
+  font-family: "Exo", sans-serif; }
+
+h1 {
+  color: #8a8c99; }
+
+section {
+  padding: 10px; }
+  section:nth-child(odd) {
+    background: #275f37; }
+
+@media all and (min-width: 769px) and (orientation: landscape) {
+  section {
+    display: none; }
+    section:target {
+      display: block;
+      transition: opacity 1s;
+      -webkit-transition: opacity 1s;
+      opacity: 1; } }
