@@ -1,0 +1,12 @@
+#content {
+	
+	#members-dir {
+		@include span-columns(5);
+	}
+	
+	#activity-dir {
+		@include span-columns(7);
+	}
+	
+}
+
