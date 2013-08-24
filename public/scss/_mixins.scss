@@ -125,6 +125,12 @@ $default-prefixes: webkit moz ms o;
   opacity: 1;
 }
 
+@mixin fade-out($speed){
+  transition: opacity $speed;
+  -webkit-transition: opacity $speed;
+  opacity: 0;
+}
+
 @mixin border-radius($values) {
 	-moz-border-radius: $values;
 	-webkit-border-radius: $values;

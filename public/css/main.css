@@ -288,7 +288,10 @@ a {
   a:hover {
     color: #275f37; }
 
-body {
+body,
+html {
+  min-height: 100%;
+  height: 100%;
   background: #4fb76c; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
@@ -300,6 +303,22 @@ header {
     width: 100%;
     height: auto; }
 
+@media all and (min-width: 768px) and (orientation: landscape) {
+  header {
+    overflow: visible;
+    position: static; }
+    header img {
+      position: absolute;
+      bottom: -130px; }
+
+  .logo {
+    width: 300px;
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 10; } }
 nav {
   background: #fff; }
   nav a {
@@ -312,18 +331,69 @@ nav {
     box-sizing: border-box; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
-  header {
-    height: auto;
-    overflow: visible; } }
+  nav a {
+    position: absolute;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px 30px 30px 0;
+    background: #fff;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    text-indent: -9999999px; }
+    nav a:hover {
+      background-color: #4fb76c;
+      transition: background-color 0.5s;
+      -webkit-transition: background-color 0.5s; }
+  nav .who {
+    bottom: 30%;
+    left: 10%; }
+  nav .what {
+    bottom: 30%;
+    left: 30%; }
+  nav .when {
+    bottom: 30%;
+    left: 50%; }
+  nav .where {
+    bottom: 30%;
+    left: 70%; }
+  nav .why {
+    bottom: 30%;
+    left: 90%; } }
 section {
   margin: 10px;
   border-bottom: 1px solid #45a860; }
 
+.close {
+  display: none; }
+
 @media all and (min-width: 768px) and (orientation: landscape) {
   section {
-    display: none; }
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    margin: 0;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    opacity: 0; }
     section:target {
-      display: block;
       transition: opacity 1s;
       -webkit-transition: opacity 1s;
-      opacity: 1; } }
+      opacity: 1; }
+
+  section:target ~ .close {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 15; } }
+footer {
+  display: none; }
