@@ -946,3 +946,4 @@ node_modules/jade/node_modules/with/test/index.js
 node_modules/jade/package.json
 node_modules/jade/runtime.js
 public/img/feature.jpg
+public/img/archive/*.jpg
