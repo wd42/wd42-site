@@ -333,6 +333,7 @@ header {
     overflow: hidden;
     z-index: 10;
     opacity: 0.5;
+    border-radius: 40px;
     -moz-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
     -ms-transition: opacity 0.3s;
@@ -343,12 +344,17 @@ header {
       right: 0;
       width: 60px;
       height: 60px;
-      bottom: auto; }
+      bottom: auto;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box; }
     .logo span {
       color: #90919b;
       position: absolute;
       left: 220px;
-      opacity: 0;
       font-size: 30px;
       line-height: 60px;
       font-weight: 700;
@@ -371,7 +377,6 @@ header {
       opacity: 1; }
       .logo:hover span {
         left: 0px;
-        opacity: 1;
         -moz-transition: left 0.5s;
         -o-transition: left 0.5s;
         -ms-transition: left 0.5s;
