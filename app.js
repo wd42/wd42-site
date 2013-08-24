@@ -6,9 +6,12 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , download = require('./lib/download');
 
 var app = express();
+
+download();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
