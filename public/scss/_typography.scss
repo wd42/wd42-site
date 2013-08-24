@@ -1,17 +1,35 @@
 body {
   font-family: $body-font-stack;
-  color: $body-color;
+  color: $m-body-color;
 }
 
 h1 {
-  color: $heading-color;
+  color: $m-heading-color;
+  margin: 0;
   @include rem(rem, 22);
 }
 
 a {
-  color: $link-color;
+  color: $m-link-color;
   text-decoration: none;
   &:hover {
-    color: darken($link-color, 25%);
+    color: darken($m-link-color, 25%);
+  }
+}
+
+@media #{$desktop} {
+  body {
+    color: $d-body-color;
+  }
+
+  h1 {
+    color: $d-heading-color;
+  }
+
+  a {
+    color: $d-link-color;
+    &:hover {
+      color: darken($d-link-color, 10%);
+    }
   }
 }
