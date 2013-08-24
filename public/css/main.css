@@ -274,10 +274,11 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 body {
-  font-family: "Exo", sans-serif; }
+  font-family: "Exo", sans-serif;
+  color: white; }
 
 h1 {
-  color: #8a8c99;
+  color: white;
   rem: 22;
   rem: 1.375rem; }
 
@@ -286,6 +287,9 @@ a {
   text-decoration: none; }
   a:hover {
     color: #275f37; }
+
+body {
+  background: #4fb76c; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   body {
@@ -296,14 +300,24 @@ header {
     width: 100%;
     height: auto; }
 
+nav {
+  background: #fff; }
+  nav a {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
 @media all and (min-width: 768px) and (orientation: landscape) {
   header {
     height: auto;
     overflow: visible; } }
 section {
-  padding: 10px; }
-  section:nth-child(odd) {
-    background: #275f37; }
+  margin: 10px;
+  border-bottom: 1px solid #45a860; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   section {

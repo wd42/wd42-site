@@ -1,3 +1,7 @@
+body {
+  background: $accent-color;
+}
+
 @media #{$desktop} {
   body {
     overflow: hidden;
@@ -13,6 +17,17 @@ header {
   }
 }
 
+nav {
+  background: #fff;
+  a {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    padding: $base-padding;
+    @include box-sizing(border-box);
+  }
+}
+
 @media #{$desktop} {
   header {
     height: auto;
@@ -22,10 +37,8 @@ header {
 
 
 section {
-  padding: $base-padding;
-  &:nth-child(odd){
-    background: darken($accent-color, 25%);
-  }
+  margin: $base-padding;
+  border-bottom: 1px solid darken($accent-color, 5%);
 }
 
 
