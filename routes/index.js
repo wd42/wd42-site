@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index');
+  res.render('index', { title: 'Welcome to Web Developer 42&deg;' });
 };
