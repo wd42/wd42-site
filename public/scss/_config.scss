@@ -4,10 +4,10 @@ $body-font-stack:  'Exo', sans-serif;
 
 $body-color: #8a8c99;
 $heading-color: #8a8c99;
-
+$link-color: #4fb76c;
 $accent-color: #4fb76c;
 
-$break-min: 769px;
+$desktop: "all and (min-width:768px) and (orientation:landscape)";
 
 $base-padding: 10px;
 

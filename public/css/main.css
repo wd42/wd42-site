@@ -15,6 +15,18 @@
 /**
   * functions
 **/
+/**
+  * utilities
+**/
+/**
+  * font rules
+**/
+/**
+  * css3 rules
+**/
+/**
+  * functions
+**/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -51,7 +63,9 @@ textarea {
 
 body {
   font-size: 1em;
-  line-height: 1.4; }
+  line-height: 1.4;
+  padding: 0;
+  margin: 0; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -263,14 +277,35 @@ body {
   font-family: "Exo", sans-serif; }
 
 h1 {
-  color: #8a8c99; }
+  color: #8a8c99;
+  rem: 22;
+  rem: 1.375rem; }
 
+a {
+  color: #4fb76c;
+  text-decoration: none; }
+  a:hover {
+    color: #275f37; }
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+  body {
+    overflow: hidden; } }
+header {
+  position: relative; }
+  header img {
+    width: 100%;
+    height: auto; }
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+  header {
+    height: auto;
+    overflow: visible; } }
 section {
   padding: 10px; }
   section:nth-child(odd) {
     background: #275f37; }
 
-@media all and (min-width: 769px) and (orientation: landscape) {
+@media all and (min-width: 768px) and (orientation: landscape) {
   section {
     display: none; }
     section:target {

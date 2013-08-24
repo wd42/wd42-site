@@ -4,4 +4,13 @@ body {
 
 h1 {
   color: $heading-color;
+  @include rem(rem, 22);
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: darken($link-color, 25%);
+  }
 }

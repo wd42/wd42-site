@@ -1,6 +1,31 @@
+@media #{$desktop} {
+  body {
+    overflow: hidden;
+  }
+}
+
+
+header {
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media #{$desktop} {
+  header {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+
 section {
   padding: $base-padding;
   &:nth-child(odd){
     background: darken($accent-color, 25%);
   }
 }
+
+
