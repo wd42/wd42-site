@@ -5,7 +5,7 @@ body {
 
 h1 {
   color: $m-heading-color;
-  margin: 0;
+  margin-top: 0;
   @include rem(rem, 22);
 }
 
