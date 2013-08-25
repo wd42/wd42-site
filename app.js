@@ -7,46 +7,9 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
-  , download = require('./lib/download')
-  , speakers = require('lanyard-speakers').getSpeakers
-  , level = require('level');
+  , download = require('./lib/download');
 
 var app = express();
-
-var options = {
-  hostname: 'lanyrd.com',
-  path: '/series/wd42/'
-};
-
-speakers(options, function(speakers) {
-  var db = level('./db', {
-    valueEncoding: 'json'
-  });
-
-  var ws = db.createWriteStream({
-    type: 'put'
-  });
-
-  ws.on('error', function() {
-    console.log('Ooops!', err);
-  });
-
-  ws.on('close', function() {
-    console.log('closed!');
-    db.close();
-  });
-
-  speakers.forEach(function(speaker) {
-    ws.write({
-      key: speaker.name,
-      value: speaker,
-      valueEncoding: 'json'
-    });
-    console.log('written');
-  });
-
-  ws.end();
-});
 
 download();
 
