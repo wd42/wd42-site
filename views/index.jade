@@ -22,54 +22,12 @@ block content
     article
       h1 Who are the speakers? AYE?
       ul.speakers
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
-        li.profile
-          a(href="#")
-            img(src="/img/profile.png", title="Some fool!")
-            span Casey Benny
+        each speaker in speakers
+          li.profile
+            a(href=speaker.profile)
+              img(src=speaker.image, title=speaker.name)
+              span=speaker.name
+
   section#what
     article
       h1 Heading!
