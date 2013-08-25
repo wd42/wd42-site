@@ -1,5 +1,6 @@
 {
-  "name": "application-name",
+  "name": "wd42-site",
+  "description": "Website for Web Developer 42°",
   "version": "0.0.1",
   "private": true,
   "scripts": {
