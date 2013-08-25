@@ -131,6 +131,18 @@ $default-prefixes: webkit moz ms o;
   opacity: 0;
 }
 
+@mixin slide-in($speed){
+  transition: top $speed;
+  -webkit-transition: top $speed;
+  top: 0;
+}
+
+@mixin slide-out($speed){
+  transition: top $speed;
+  -webkit-transition: top $speed;
+  top: -100%;
+}
+
 @mixin border-radius($values) {
 	-moz-border-radius: $values;
 	-webkit-border-radius: $values;
