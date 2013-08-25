@@ -2,3 +2,4 @@
 node_modules/
 public/img/feature.jpg
 public/img/archive/*.jpg
+.sass-cache
