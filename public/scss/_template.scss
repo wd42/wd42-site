@@ -27,6 +27,8 @@ header {
     img {
       position: absolute;
       bottom: -130px;
+      /*-webkit-filter: saturate(2);
+      filter: saturate(2); */
     }
   }
 
@@ -35,10 +37,10 @@ header {
     position: absolute;
     width: 280px;
     height: 60px;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     overflow: hidden;
-    z-index: 10;
+    z-index: 20;
     opacity: 0.5;
     border-radius: 40px;
     @include transition(opacity 0.3s);
