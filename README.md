@@ -1,2 +1,2 @@
-# Web Deverloper 42°
+# Web Developer 42°
 All aboard the fun train.
