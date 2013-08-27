@@ -1,4 +1,3 @@
-
 /*
  * GET home page.
  */
@@ -12,29 +11,32 @@ var db = level('./db', {
 
 var speakers = [];
 
+// load previously cached version
+db.createValueStream().on('data', function (speaker) {
+  speakers.push(speaker)
+})
+
 var options = {
   hostname: 'lanyrd.com',
   path: '/series/wd42/'
 };
 
 lanyard.getSpeakers(options, function(data) {
-  var ws = db.createValueStream();
-  var ops = [];
+  speakers = data
 
-  data.forEach(function(speaker) {
-    ops.push({
+  // write a new version, note that this doesn't delete
+  // any that don't exist in the new version but existed in
+  // the old version
+  var ops = data.map(function(speaker) {
+    return {
       type: 'put',
       key: speaker.name,
       value: speaker,
-    });
+    };
   });
 
   db.batch(ops, function(err) {
     if (err) return console.log(err);
-  });
-
-  ws.on('data', function (data) {
-    speakers.push(data);
   });
 });
 
