@@ -1,7 +1,3 @@
-/*
- * GET home page.
- */
-
 var level = require('level');
 var lanyard = require('lanyard-speakers');
 
@@ -13,8 +9,8 @@ var speakers = [];
 
 // load previously cached version
 db.createValueStream().on('data', function (speaker) {
-  speakers.push(speaker)
-})
+  speakers.push(speaker);
+});
 
 var options = {
   hostname: 'lanyrd.com',
@@ -22,7 +18,7 @@ var options = {
 };
 
 lanyard.getSpeakers(options, function(data) {
-  speakers = data
+  speakers = data;
 
   // write a new version, note that this doesn't delete
   // any that don't exist in the new version but existed in
@@ -31,7 +27,7 @@ lanyard.getSpeakers(options, function(data) {
     return {
       type: 'put',
       key: speaker.name,
-      value: speaker,
+      value: speaker
     };
   });
 
