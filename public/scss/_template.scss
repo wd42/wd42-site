@@ -23,10 +23,7 @@ header {
 @media #{$desktop} {
   header {
     overflow: visible;
-    position: static;
     img {
-      position: absolute;
-      bottom: -130px;
       /*-webkit-filter: saturate(2);
       filter: saturate(2); */
     }
@@ -146,28 +143,43 @@ nav {
     }
 
     .who {
-      bottom: 10%;
-      left: 10%;
+      bottom: 55%;
+      left: 11%;
+      &:hover {
+        bottom: 54%;
+      }
     }
 
     .what {
-      bottom: 10%;
-      left: 30%;
+      bottom: 47%;
+      left: 29%;
+      &:hover {
+        bottom: 46%;
+      }
     }
 
     .when {
-      bottom: 10%;
-      left: 50%;
+      bottom: 51%;
+      left: 57%;
+      &:hover {
+        bottom: 50%;
+      }
     }
 
     .where {
-      bottom: 37%;
-      left: 66%;
+      bottom: 73%;
+      left: 54.2%;
+      &:hover {
+        bottom: 72%;
+      }
     }
 
     .why {
-      bottom: 10%;
-      left: 90%;
+      bottom: 56%;
+      left: 88%;
+      &:hover {
+        bottom: 55%;
+      }
     }
   }
 }
@@ -186,11 +198,12 @@ section {
   z-index: 15;
   color: #fff;
   background: $accent-color;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
-  @include border-radius(10px);
+  font-size: 30px;
+  @include border-radius(30px);
   @include transition(background 0.5s);
   &:hover {
     background: #fff;

@@ -315,11 +315,8 @@ header {
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   header {
-    overflow: visible;
-    position: static; }
+    overflow: visible; }
     header img {
-      position: absolute;
-      bottom: -130px;
       /*-webkit-filter: saturate(2);
       filter: saturate(2); */ }
 
@@ -445,20 +442,30 @@ nav {
     -webkit-transition: opacity 0.5s;
     opacity: 0; }
   nav .who {
-    bottom: 10%;
-    left: 10%; }
+    bottom: 55%;
+    left: 11%; }
+    nav .who:hover {
+      bottom: 54%; }
   nav .what {
-    bottom: 10%;
-    left: 30%; }
+    bottom: 47%;
+    left: 29%; }
+    nav .what:hover {
+      bottom: 46%; }
   nav .when {
-    bottom: 10%;
-    left: 50%; }
+    bottom: 51%;
+    left: 57%; }
+    nav .when:hover {
+      bottom: 50%; }
   nav .where {
-    bottom: 37%;
-    left: 66%; }
+    bottom: 73%;
+    left: 54.2%; }
+    nav .where:hover {
+      bottom: 72%; }
   nav .why {
-    bottom: 10%;
-    left: 90%; } }
+    bottom: 56%;
+    left: 88%; }
+    nav .why:hover {
+      bottom: 55%; } }
 section {
   margin: 10px;
   border-bottom: 1px solid #45a860; }
@@ -471,13 +478,14 @@ section {
   z-index: 15;
   color: #fff;
   background: #4fb76c;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  font-size: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
