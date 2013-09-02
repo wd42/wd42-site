@@ -29,6 +29,29 @@ header {
     }
   }
 
+  .tagline {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    top: 100px;
+    color: #fff;
+    text-shadow: 0 0 10px $shadow-color;
+
+    &:before{
+      position: absolute;
+      content: '}';
+      font-size: 420px;
+      font-weight: 100;
+      text-align: center;
+      top: -251px;
+      width: 626px;
+      opacity: 0.2;
+      @include transform(rotate(90deg) scaleY(1.5));
+    }
+  }
+
   .logo {
     display: block;
     position: absolute;
@@ -84,6 +107,7 @@ nav {
     text-align: center;
     display: inline-block;
     padding: $base-padding;
+
     @include box-sizing(border-box);
   }
 }
@@ -93,17 +117,13 @@ nav {
     a {
       position: absolute;
       z-index: 10;
-      width: 30px;
-      height: 30px;
-      border-radius: 30px;
-      background: #fff;
-
+      color: #fff;
+      text-shadow: 0 0 10px $shadow-color;
       //@todo fix mixin to support multiple transitions and use below
       transition: background-color 0.5s, bottom 0.5s;
       -webkit-transition: background-color 0.5s, bottom 0.5s;
-
       &:hover {
-        background-color: $accent-color;
+        color: $accent-color;
         transition: background-color 0.5s, bottom 0.5s;
         -webkit-transition: background-color 0.5s, bottom 0.5s;
         span {
@@ -111,32 +131,17 @@ nav {
           @include fade-in(0.5s);
         }
       }
-
-      &:after {
-        content: ' ';
-        height: 0;
-        position: absolute;
-        bottom: -10px;
-        left: 1px;
-        width: 0;
-
-        border-left: 14px solid transparent;
-        border-right: 14px solid transparent;
-        border-top: 20px solid #fff;
-
-        @include transition(border-color 0.5s);
-      }
-      &:hover:after {
-        border-top-color: $accent-color;
-        @include transition(border-color 0.5s);
+      &:before {
+        font-size: 40px;
       }
     }
 
     span {
       color: #fff;
+      font-family: $body-font-stack;
       position: absolute;
-      top: -25px;
-      left: -15px;
+      top: -20px;
+      left: -10px;
       width: 60px;
       text-align: center;
       @include fade-out(0.5s);
@@ -152,7 +157,7 @@ nav {
 
     .what {
       bottom: 47%;
-      left: 29%;
+      left: 32%;
       &:hover {
         bottom: 46%;
       }

@@ -320,6 +320,28 @@ header {
       /*-webkit-filter: saturate(2);
       filter: saturate(2); */ }
 
+  .tagline {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    top: 100px;
+    color: #fff;
+    text-shadow: 0 0 10px #666666; }
+    .tagline:before {
+      position: absolute;
+      content: '}';
+      font-size: 420px;
+      font-weight: 100;
+      text-align: center;
+      top: -251px;
+      width: 626px;
+      opacity: 0.2;
+      transform: rotate(90deg) scaleY(1.5);
+      -ms-transform: rotate(90deg) scaleY(1.5);
+      -webkit-transform: rotate(90deg) scaleY(1.5); }
+
   .logo {
     display: block;
     position: absolute;
@@ -394,14 +416,12 @@ nav {
   nav a {
     position: absolute;
     z-index: 10;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    background: #fff;
+    color: #fff;
+    text-shadow: 0 0 10px #666666;
     transition: background-color 0.5s, bottom 0.5s;
     -webkit-transition: background-color 0.5s, bottom 0.5s; }
     nav a:hover {
-      background-color: #4fb76c;
+      color: #4fb76c;
       transition: background-color 0.5s, bottom 0.5s;
       -webkit-transition: background-color 0.5s, bottom 0.5s; }
       nav a:hover span {
@@ -409,33 +429,14 @@ nav {
         transition: opacity 0.5s;
         -webkit-transition: opacity 0.5s;
         opacity: 1; }
-    nav a:after {
-      content: ' ';
-      height: 0;
-      position: absolute;
-      bottom: -10px;
-      left: 1px;
-      width: 0;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-top: 20px solid #fff;
-      -moz-transition: border-color 0.5s;
-      -o-transition: border-color 0.5s;
-      -ms-transition: border-color 0.5s;
-      -webkit-transition: border-color 0.5s;
-      transition: border-color 0.5s; }
-    nav a:hover:after {
-      border-top-color: #4fb76c;
-      -moz-transition: border-color 0.5s;
-      -o-transition: border-color 0.5s;
-      -ms-transition: border-color 0.5s;
-      -webkit-transition: border-color 0.5s;
-      transition: border-color 0.5s; }
+    nav a:before {
+      font-size: 40px; }
   nav span {
     color: #fff;
+    font-family: "Exo", sans-serif;
     position: absolute;
-    top: -25px;
-    left: -15px;
+    top: -20px;
+    left: -10px;
     width: 60px;
     text-align: center;
     transition: opacity 0.5s;
@@ -448,7 +449,7 @@ nav {
       bottom: 54%; }
   nav .what {
     bottom: 47%;
-    left: 29%; }
+    left: 32%; }
     nav .what:hover {
       bottom: 46%; }
   nav .when {
