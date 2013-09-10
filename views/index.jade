@@ -1,4 +1,4 @@
-extends layout
+extends content
 
 block content
   header
@@ -24,38 +24,31 @@ block content
     a.close(href="#")
       i.icon-remove
     article
-      h1 Who are the speakers? AYE?
-      ul.speakers
-        each speaker in speakers
-          li.profile
-            a(href=speaker.profile)
-              img(src=speaker.image, title=speaker.name)
-              span=speaker.name
+      block who
 
   section#what
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p WHAT!
+      block what
+
   section#when
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p When page
+      block when
+
   section#where
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p Wherepage
+      block where
+
   section#why
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p WHYYYYYYYYY
+      block where
 
   footer
     p Feet.
