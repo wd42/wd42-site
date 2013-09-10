@@ -1,4 +1,4 @@
-extends content
+extends layout
 
 block content
   header
@@ -24,31 +24,31 @@ block content
     a.close(href="#")
       i.icon-remove
     article
-      block who
+      include ./content/who
 
   section#what
     a.close(href="#")
       i.icon-remove
     article
-      block what
+      include ./content/what
 
   section#when
     a.close(href="#")
       i.icon-remove
     article
-      block when
+      include ./content/when
 
   section#where
     a.close(href="#")
       i.icon-remove
     article
-      block where
+      include ./content/where
 
   section#why
     a.close(href="#")
       i.icon-remove
     article
-      block where
+      include ./content/where
 
   footer
     p Feet.
