@@ -5,6 +5,7 @@ All aboard the fun train.
 The Web Developer 42° site is built with Node.js at it's core and as such a working Node.js install
 is required before you can do anything with the code in this repository.
 
+Details regarding getting the intstallation of Node.js on your system can be found at https://github.com/joyent/node/wiki/Installation.
 
 ### Getting started
 From within the root of your local copy of this repository, you'll need to fetch all module dependencies
