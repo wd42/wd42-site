@@ -24,38 +24,31 @@ block content
     a.close(href="#")
       i.icon-remove
     article
-      h1 Who are the speakers? AYE?
-      ul.speakers
-        each speaker in speakers
-          li.profile
-            a(href=speaker.profile)
-              img(src=speaker.image, title=speaker.name)
-              span=speaker.name
+      include ./content/who
 
   section#what
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p WHAT!
+      include ./content/what
+
   section#when
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p When page
+      include ./content/when
+
   section#where
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p Wherepage
+      include ./content/where
+
   section#why
     a.close(href="#")
       i.icon-remove
     article
-      h1 Heading!
-      p WHYYYYYYYYY
+      include ./content/why
 
   footer
     p Feet.

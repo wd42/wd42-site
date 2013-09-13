@@ -318,30 +318,30 @@ header {
     overflow: visible; }
     header img {
       /*-webkit-filter: saturate(2);
-      filter: saturate(2); */ }
+      filter: saturate(2); */ } }
+.logo {
+  display: block;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .logo img {
+    width: 68px; }
+  .logo span {
+    font-size: 30px;
+    line-height: 68px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 10px;
+    color: #90919b; }
+  .logo em {
+    color: #4fb76c;
+    font-style: normal;
+    font-weight: 100; }
 
-  .tagline {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5em;
-    letter-spacing: 1px;
-    top: 100px;
-    color: #fff;
-    text-shadow: 0 0 10px #666666; }
-    .tagline:before {
-      position: absolute;
-      content: '}';
-      font-size: 420px;
-      font-weight: 100;
-      text-align: center;
-      top: -251px;
-      width: 626px;
-      opacity: 0.2;
-      transform: rotate(90deg) scaleY(1.5);
-      -ms-transform: rotate(90deg) scaleY(1.5);
-      -webkit-transform: rotate(90deg) scaleY(1.5); }
-
+@media all and (min-width: 768px) and (orientation: landscape) {
   .logo {
     display: block;
     position: absolute;
@@ -353,6 +353,8 @@ header {
     z-index: 20;
     opacity: 0.5;
     border-radius: 40px;
+    background: none;
+    padding: 0;
     -moz-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
     -ms-transition: opacity 0.3s;
@@ -371,7 +373,6 @@ header {
       -webkit-background-clip: padding-box;
       background-clip: padding-box; }
     .logo span {
-      color: #90919b;
       position: absolute;
       left: 220px;
       font-size: 30px;
@@ -383,10 +384,6 @@ header {
       -ms-transition: left 0.5s;
       -webkit-transition: left 0.5s;
       transition: left 0.5s; }
-    .logo em {
-      color: #4fb76c;
-      font-style: normal;
-      font-weight: 100; }
     .logo:hover {
       -moz-transition: opacity 0.3s;
       -o-transition: opacity 0.3s;
@@ -401,8 +398,42 @@ header {
         -ms-transition: left 0.5s;
         -webkit-transition: left 0.5s;
         transition: left 0.5s; } }
+.tagline {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  bottom: 10px;
+  padding: 0 10px;
+  background: rgba(39, 95, 55, 0.8);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+  .tagline {
+    top: 100px;
+    bottom: auto;
+    color: #fff;
+    background: none;
+    text-shadow: 0 0 10px #666666;
+    padding: 0; }
+    .tagline:before {
+      position: absolute;
+      content: '}';
+      font-size: 420px;
+      font-weight: 100;
+      text-align: center;
+      top: -251px;
+      width: 626px;
+      opacity: 0.2;
+      transform: rotate(90deg) scaleY(1.5);
+      -ms-transform: rotate(90deg) scaleY(1.5);
+      -webkit-transform: rotate(90deg) scaleY(1.5); } }
 nav {
-  background: #fff; }
+  background: #fff;
+  text-align: center; }
   nav a {
     width: 20%;
     text-align: center;
@@ -411,6 +442,12 @@ nav {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+  nav [class^="icon-"],
+  nav [class*=" icon-"] {
+    display: inline-block; }
+    nav [class^="icon-"]:before,
+    nav [class*=" icon-"]:before {
+      display: none; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   nav a {
@@ -431,6 +468,9 @@ nav {
         opacity: 1; }
     nav a:before {
       font-size: 40px; }
+  nav [class^="icon-"]:before,
+  nav [class*=" icon-"]:before {
+    display: block; }
   nav span {
     color: #fff;
     font-family: "Exo", sans-serif;
