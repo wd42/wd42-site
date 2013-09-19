@@ -5,29 +5,29 @@ var db = level('./db', {
   valueEncoding: 'json'
 });
 
-var speakers = [];
+var users = [],
+    speakers = [],
+    attendees = [];
 
 // load previously cached version
-db.createValueStream().on('data', function (speaker) {
-  speakers.push(speaker);
+db.createValueStream().on('data', function (user) {
+  users.push(user);
 });
 
 var options = {
   hostname: 'lanyrd.com',
-  path: '/series/wd42/'
+  path: '/series/wd42/',
+  type: 'all'
 };
 
-lanyard.getSpeakers(options, function(data) {
-  speakers = data;
+lanyard.getUsers(options, function(data) {
+  users = data;
 
-  // write a new version, note that this doesn't delete
-  // any that don't exist in the new version but existed in
-  // the old version
-  var ops = data.map(function(speaker) {
+  var ops = data.map(function(user) {
     return {
       type: 'put',
-      key: speaker.name,
-      value: speaker
+      key: user.name,
+      value: user
     };
   });
 
@@ -36,9 +36,12 @@ lanyard.getSpeakers(options, function(data) {
   });
 });
 
+
+
 exports.index = function(req, res){
+
   res.render('index', {
     title: 'Welcome to Web Developer 42&deg;',
-    speakers: speakers
+    users: users
   });
 };

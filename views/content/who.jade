@@ -11,12 +11,13 @@ p.
   and effort to prepaire and present talks targeted at pushing boundries
   and expanding the combined knowledge of our community
 
-ul.speakers
-  each speaker in speakers
-    li.profile
-      a(href=speaker.profile)
-        img(src=speaker.image, title=speaker.name)
-        span=speaker.name
+ul.people.speakers
+  each user in users
+    if user.type == 'speaker'
+      li.profile
+        a(href=user.profile)
+          img(src=user.image, title=user.name)
+          span=user.name
 
 h2 The community at large
 
@@ -25,9 +26,10 @@ p.
   preview of the dedicated members of the community as a whole. Without
   the people listed here, Web Developer 42&deg; would be nothing.
 
-ul.speakers.community
-  each speaker in speakers
-    li.profile
-      a(href=speaker.profile)
-        img(src=speaker.image, title=speaker.name)
-        span=speaker.name
+ul.people.attendees
+  each user in users
+    if user.type == 'attendee'
+      li.profile
+        a(href=user.profile)
+          img(src=user.image, title=user.name)
+          span=user.name
