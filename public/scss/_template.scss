@@ -246,6 +246,15 @@ nav {
 section {
   margin: $base-padding;
   border-bottom: 1px solid darken($accent-color, 5%);
+
+  img {
+    max-width: 100%;
+  }
+
+  p,
+  address {
+    margin: 0 0 15px 0;
+  }
 }
 
 .close {
@@ -293,7 +302,7 @@ section {
   }
 }
 
-.speakers {
+.people {
   margin: 0 0 0 -10px;
   padding: 0;
   overflow: hidden;
@@ -301,15 +310,25 @@ section {
   li {
     float: left;
     margin-bottom: 10px;
-    width: 16.666%;
+    width: (100% / 3);
+    height: 130px;
   }
 }
+@media #{$desktop} {
+  .people {
+    li {
+      width: (100% / 6);
+      height: auto;
+    }
+  }
+}
+
 
 .profile {
   text-align: center;
   img {
     width: 80px;
-    height: 80px;
+    height: auto;
     border-radius: 50px;
     border: 0px solid $accent-color;
     @include box-sizing(border-box);
@@ -319,11 +338,18 @@ section {
     padding: 0 10px;
     display: block;
   }
+}
+@media #{$desktop} {
+  .profile {
+    &:hover {
+      img {
+        border: 5px solid $accent-color;
+        @include transition(border 0.5s);
+      }
+    }
 
-  &:hover {
     img {
-      border: 5px solid $accent-color;
-      @include transition(border 0.5s);
+      height: 80px;
     }
   }
 }

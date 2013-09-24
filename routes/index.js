@@ -5,9 +5,7 @@ var db = level('./db', {
   valueEncoding: 'json'
 });
 
-var users = [],
-    speakers = [],
-    attendees = [];
+var users = [];
 
 // load previously cached version
 db.createValueStream().on('data', function (user) {
