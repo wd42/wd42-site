@@ -298,7 +298,12 @@ a {
   a {
     color: #275f37; }
     a:hover {
-      color: #183b22; } }
+      color: #183b22; }
+
+  p {
+    font-size: 1.5em;
+    color: #183b22;
+    width: 40%; } }
 body,
 html {
   min-height: 100%;
@@ -423,11 +428,12 @@ header {
     .tagline:before {
       position: absolute;
       content: '}';
-      font-size: 420px;
+      font-family: Times New Roman;
+      font-size: 650px;
       font-weight: 100;
       text-align: center;
-      top: -251px;
-      width: 626px;
+      top: -360px;
+      width: 875px;
       opacity: 0.2;
       transform: rotate(90deg) scaleY(1.5);
       -ms-transform: rotate(90deg) scaleY(1.5);
@@ -519,10 +525,10 @@ section {
 
 .close {
   display: none;
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  top: 20px;
   right: 20px;
-  z-index: 15;
+  z-index: 25;
   color: #fff;
   background: #4fb76c;
   width: 60px;
@@ -559,6 +565,7 @@ section {
     top: 0;
     margin: 0;
     padding: 20px;
+    z-index: 25;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -568,8 +575,7 @@ section {
     section:target {
       transition: top 1s;
       -webkit-transition: top 1s;
-      top: 0;
-      z-index: 12; }
+      top: 0; }
 
   section:target .close {
     display: inline-block; } }
@@ -585,9 +591,12 @@ section {
     height: 130px; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
-  .people li {
-    width: 16.66667%;
-    height: auto; } }
+  .people {
+    width: 50%;
+    float: right; }
+    .people li {
+      width: 16.66667%;
+      height: auto; } }
 .profile {
   text-align: center; }
   .profile img {
@@ -605,7 +614,8 @@ section {
     transition: border 0.5s; }
   .profile span {
     padding: 0 10px;
-    display: block; }
+    display: block;
+    text-transform: capitalize; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   .profile:hover img {

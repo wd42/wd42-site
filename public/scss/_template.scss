@@ -125,11 +125,12 @@ header {
     &:before{
       position: absolute;
       content: '}';
-      font-size: 420px;
+      font-family: Times New Roman;
+      font-size: 650px;
       font-weight: 100;
       text-align: center;
-      top: -251px;
-      width: 626px;
+      top: -360px;
+      width: 875px;
       opacity: 0.2;
       @include transform(rotate(90deg) scaleY(1.5));
     }
@@ -259,10 +260,10 @@ section {
 
 .close {
   display: none;
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  top: 20px;
   right: 20px;
-  z-index: 15;
+  z-index: 25;
   color: #fff;
   background: $accent-color;
   width: 60px;
@@ -288,17 +289,16 @@ section {
     top: 0;
     margin: 0;
     padding: 20px;
+    z-index: 25;
     @include box-sizing(border-box);
     @include slide-out(1s);
     &:target {
       @include slide-in(1s);
-      z-index: 12;
     }
   }
 
   section:target .close {
     display: inline-block;
-
   }
 }
 
@@ -316,6 +316,8 @@ section {
 }
 @media #{$desktop} {
   .people {
+    width: 50%;
+    float: right;
     li {
       width: (100% / 6);
       height: auto;

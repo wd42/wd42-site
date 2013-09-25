@@ -32,4 +32,10 @@ a {
       color: darken($d-link-color, 10%);
     }
   }
+
+  p {
+    font-size: 1.5em;
+    color: darken($d-link-color, 10%);
+    width: 40%;
+  }
 }
