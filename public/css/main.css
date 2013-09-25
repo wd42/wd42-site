@@ -279,20 +279,21 @@ body {
 
 h1 {
   color: white;
-  margin: 17px 0 37px 0; }
+  margin: 17px 0; }
 
 a {
-  color: #4fb76c;
+  color: #275f37;
   text-decoration: none; }
   a:hover {
-    color: #275f37; }
+    color: #020503; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   body {
     color: #4fb76c; }
 
   h1 {
-    color: #4fb76c; }
+    color: #4fb76c;
+    margin: 17px 0 37px 0; }
 
   a {
     color: #275f37; }
@@ -510,6 +511,11 @@ nav {
 section {
   margin: 10px;
   border-bottom: 1px solid #45a860; }
+  section img {
+    max-width: 100%; }
+  section p,
+  section address {
+    margin: 0 0 15px 0; }
 
 .close {
   display: none;
@@ -567,21 +573,26 @@ section {
 
   section:target .close {
     display: inline-block; } }
-.speakers {
+.people {
   margin: 0 0 0 -10px;
   padding: 0;
   overflow: hidden;
   list-style: none; }
-  .speakers li {
+  .people li {
     float: left;
     margin-bottom: 10px;
-    width: 16.666%; }
+    width: 33.33333%;
+    height: 130px; }
 
+@media all and (min-width: 768px) and (orientation: landscape) {
+  .people li {
+    width: 16.66667%;
+    height: auto; } }
 .profile {
   text-align: center; }
   .profile img {
     width: 80px;
-    height: 80px;
+    height: auto;
     border-radius: 50px;
     border: 0px solid #4fb76c;
     -moz-box-sizing: border-box;
@@ -595,6 +606,8 @@ section {
   .profile span {
     padding: 0 10px;
     display: block; }
+
+@media all and (min-width: 768px) and (orientation: landscape) {
   .profile:hover img {
     border: 5px solid #4fb76c;
     -moz-transition: border 0.5s;
@@ -602,6 +615,7 @@ section {
     -ms-transition: border 0.5s;
     -webkit-transition: border 0.5s;
     transition: border 0.5s; }
-
+  .profile img {
+    height: 80px; } }
 footer {
   display: none; }
