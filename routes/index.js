@@ -5,13 +5,19 @@ var db = level('./db', {
   valueEncoding: 'json'
 });
 
-var users = [],
-    speakers = [],
-    attendees = [];
+var users = [];
+var community = {
+  total: 0,
+  speakers: [],
+  attendees: []
+};
 
 // load previously cached version
 db.createValueStream().on('data', function (user) {
-  users.push(user);
+  var type = user.type;
+  if (type === 'speaker') community.speakers.push(user);
+  if (type === 'attendee') community.attendees.push(user);
+  community.total++;
 });
 
 var options = {
@@ -36,12 +42,10 @@ lanyard.getUsers(options, function(data) {
   });
 });
 
-
-
 exports.index = function(req, res){
-
   res.render('index', {
     title: 'Welcome to Web Developer 42&deg;',
-    users: users
+    users: users,
+    community: community 
   });
 };

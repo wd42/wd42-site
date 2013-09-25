@@ -6,49 +6,49 @@ block content
       img(src="/img/logo-min.png", title="Web Developer 42&deg;")
       span web
         em developer
-    h1.tagline WD42 - The closest web dev meetup to Antarctica
+    h1.tagline WD42 - Almost the closest web dev meetup to Antarctica.
     img.featureImage(src="/img/feature.jpg")
     nav
-      a.who.icon-map-marker(href="#who")
-        span Who
-      a.what.icon-map-marker(href="#what")
-        span What
-      a.when.icon-map-marker(href="#when")
-        span When
-      a.where.icon-map-marker(href="#where")
-        span Where
-      a.why.icon-map-marker(href="#why")
-        span Why
+      a.who.icon-map-marker(href="#community")
+        span Community
+      a.what.icon-map-marker(href="#about")
+        span About
+      a.when.icon-map-marker(href="#events")
+        span Events
+      //-a.where.icon-map-marker(href="#coverage")
+      //-  span Coverage
+      a.why.icon-map-marker(href="#contact")
+        span Contact
 
-  section#who
+  section#community
     a.close(href="#")
       i.icon-remove
     article
-      include ./content/who
+      include ./content/community
 
-  section#what
+  section#about
     a.close(href="#")
       i.icon-remove
     article
-      include ./content/what
+      include ./content/about
 
-  section#when
+  section#events
     a.close(href="#")
       i.icon-remove
     article
-      include ./content/when
+      include ./content/events
 
-  section#where
+  //-section#coverage
+  //-  a.close(href="#")
+  //-    i.icon-remove
+  //-  article
+  //-    include ./content/coverage
+
+  section#contact
     a.close(href="#")
       i.icon-remove
     article
-      include ./content/where
-
-  section#why
-    a.close(href="#")
-      i.icon-remove
-    article
-      include ./content/why
+      include ./content/contact
 
   footer
     p Feet.

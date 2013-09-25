@@ -1,0 +1,25 @@
+h1 Community
+
+p.
+  Who are we?
+
+p.
+  We are a community of Web Developers, Designers, Entrepreneurs, Thinkers, Tinkerers and Users. Together, we are committed to making a change for the better and to aide in the continued growth of the Web Industry as a whole.
+
+p.
+  To date roughly #{community.total} people have attended #wd42 and became a part of our community of Tasmanian Web Developers. Of these the #{community.speakers.length} listed below have prepared and presented fantastic talks targeted at pushing boundaries and expanding the combined knowledge of our community. Without the continued support of the community, Web Developer 42° would be nothing.
+
+ul.people.speakers
+  each speaker in community.speakers
+    li.profile
+      a(href=speaker.profile)
+        img(src=speaker.image, title=speaker.name)
+        span=speaker.name
+
+//-ul.people.attendees
+//-  each user in users
+//-    if user.type == 'attendee'
+//-      li.profile
+//-        a(href=user.profile)
+//-          img(src=user.image, title=user.name)
+//-          span=user.name
