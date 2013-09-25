@@ -23,7 +23,8 @@ a {
 
   h1 {
     color: $d-heading-color;
-    margin: 17px 0 37px 0;
+    margin: 8px 0 37px 0;
+    font-size: 2em;
   }
 
   a {
@@ -36,6 +37,9 @@ a {
   p {
     font-size: 1.5em;
     color: darken($d-link-color, 10%);
-    width: 40%;
+  }
+
+  address {
+    color: darken($d-link-color, 10%);
   }
 }

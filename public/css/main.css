@@ -293,7 +293,8 @@ a {
 
   h1 {
     color: #4fb76c;
-    margin: 17px 0 37px 0; }
+    margin: 8px 0 37px 0;
+    font-size: 2em; }
 
   a {
     color: #275f37; }
@@ -302,8 +303,10 @@ a {
 
   p {
     font-size: 1.5em;
-    color: #183b22;
-    width: 40%; } }
+    color: #183b22; }
+
+  address {
+    color: #183b22; } }
 body,
 html {
   min-height: 100%;
@@ -557,7 +560,7 @@ section {
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   section {
-    background: rgba(255, 255, 255, 0.7);
+    background: #fff;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -571,7 +574,28 @@ section {
     box-sizing: border-box;
     transition: top 1s;
     -webkit-transition: top 1s;
-    top: -100%; }
+    top: -100%;
+    display: inline-block; }
+    section:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    * html section {
+      height: 1px; }
+    section div {
+      width: 40%;
+      float: left;
+      padding-right: 15px;
+      border-right: 1px solid #4fb76c; }
+    section aside {
+      width: 50%;
+      float: left;
+      padding-left: 20px; }
+      section aside img {
+        max-width: 70%;
+        margin: 1px auto; }
     section:target {
       transition: top 1s;
       -webkit-transition: top 1s;
@@ -591,12 +615,12 @@ section {
     height: 130px; }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
-  .people {
-    width: 50%;
-    float: right; }
-    .people li {
-      width: 16.66667%;
-      height: auto; } }
+  .people img {
+    width: 100%;
+    max-width: 100%; }
+  .people li {
+    width: 16.66667%;
+    height: auto; } }
 .profile {
   text-align: center; }
   .profile img {
