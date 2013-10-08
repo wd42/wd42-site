@@ -1,7 +1,8 @@
 {
   "name": "wd42-site",
+  "subdomain": "wd42",
   "description": "Website for Web Developer 42°",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -11,5 +12,8 @@
     "jade": "*",
     "lanyard-speakers": "*",
     "level": "~0.14.0"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
